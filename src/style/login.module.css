@@ -1,0 +1,55 @@
+.section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+.titlenow {
+  color: #3abb6e;
+}
+.input {
+  width: 100%;
+  height: 3rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  outline-width: 0;
+  background-color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #c6b7b7;
+}
+
+input::placeholder {
+  color: #c6b7b7;
+}
+.btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.btndetail {
+  border: none;
+  font-size: 1.5rem;
+  background: #158442;
+  border-radius: 99px;
+  color: #c6b7b7;
+  width: 10rem;
+  height: 4rem;
+}

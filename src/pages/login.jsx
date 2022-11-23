@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "../style/login.module.css";
@@ -20,13 +21,26 @@ const Login = (props) => {
     navigate("/login/signup");
   };
 
-  // const onLoginhandler = () => {
-  //   axios
-  //     .post('//localhost:3000/api/users/login', {
-  //       email,
-  //       password
-  //     })
-  // }
+  const onLoginhandler = () => {
+    console.log("login clicked!");
+    // axios.get("https://swapi.dev/api/people/1"),
+    //   {
+    //     name,
+    //     gender,
+    //   } //
+    //     .then((data) => {
+    //       console.log(data);
+    //     })
+    //     .catch((err) => {
+    //       console.log(err);
+    //     });
+    axios({
+      method: "get",
+      url: "https://swapi.dev/api/people/1",
+    }).then((data) => {
+      console.log(data.data.name);
+    });
+  };
   return (
     <div className={style.section}>
       <div className={style.login}>
@@ -49,7 +63,9 @@ const Login = (props) => {
           required
         />
         <div className={style.btn}>
-          <button className={style.btndetail}>로그인</button>
+          <button className={style.btndetail} onClick={onLoginhandler}>
+            로그인
+          </button>
           <button className={style.btndetail} onClick={onSignupHandler}>
             회원 가입
           </button>

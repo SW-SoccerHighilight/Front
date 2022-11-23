@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./app.css";
 import NavigationBar from "./components/navigationBar";
@@ -6,9 +7,10 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 
 function App() {
+  const [isLogin, setIsLogin] = useState(true);
   return (
     <>
-      <NavigationBar />
+      {isLogin ? <NavigationBar /> : <div></div>}
       <BrowserRouter>
         <Routes>
           <Route path="/" exact element={<Login />}></Route>

@@ -1,16 +1,39 @@
+import { useNavigate } from "react-router-dom";
 import style from "../style/navigationBar.module.css";
 
 const NavigationBar = (props) => {
+  const navigate = useNavigate();
+
+  const goToHomepage = (event) => {
+    navigate("/homepage");
+  };
+  const goToSchedule = (event) => {
+    navigate("/schedule");
+  };
+  const goToSearch = (event) => {
+    navigate("/search");
+  };
+  const goToMypage = (event) => {
+    navigate("/mypage");
+  };
   return (
     <div className={style.section}>
       <span className={style.logo}>
         <span className={style.logo_front}>Sports </span>
         <span className={style.logo_back}>now</span>
       </span>
-      <span className={style.navbar}>홈</span>
-      <span className={style.navbar}>일정</span>
-      <span className={style.navbar}>검색</span>
-      <span className={style.navbar}>내 정보</span>
+      <span className={style.navbar} onClick={goToHomepage}>
+        홈
+      </span>
+      <span className={style.navbar} onClick={goToSchedule}>
+        일정
+      </span>
+      <span className={style.navbar} onClick={goToSearch}>
+        검색
+      </span>
+      <span className={style.navbar} onClick={goToMypage}>
+        내 정보
+      </span>
     </div>
   );
 };

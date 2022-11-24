@@ -1,0 +1,39 @@
+.section {
+  min-height: 87vh;
+  background-color: black;
+  color: white;
+}
+.date {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  border: double;
+  border-color: #c6b7b7;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding: 1rem;
+}
+label {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid transparent;
+}
+
+.day {
+  display: none;
+}
+
+input:checked + label {
+  border-radius: 99px;
+  border: 2px solid red;
+}
+
+input:hover + label {
+  color: yellow;
+}
+
+.match {
+  display: flex;
+  flex-direction: column;
+}

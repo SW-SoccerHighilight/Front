@@ -1,6 +1,9 @@
+import { Navigate } from "react-router-dom";
 import style from "../style/navigationBar.module.css";
 
+
 const NavigationBar = (props) => {
+ 
   return (
     <div className={style.section}>
       <span className={style.logo}>

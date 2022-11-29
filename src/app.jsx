@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./app.css";
 import NavigationBar from "./components/navigationBar";
 import Bookmarkpage from './pages/Bookmarkpage';
@@ -12,8 +12,8 @@ function App() {
   const [isLogin, setIsLogin] = useState(true);
   return (
     <>
-      {isLogin ? <NavigationBar /> : <div></div>}
-      <BrowserRouter>
+      {/* {isLogin ? <NavigationBar /> : <div></div>} */}
+      <NavigationBar />
         <Routes>
           <Route path="/" exact element={<Login />}></Route>
           <Route path="/login" exact element={<Login />}></Route>
@@ -21,7 +21,6 @@ function App() {
           <Route path="/homepage" exact element={<Homepage />}></Route>
           <Route path='/bookmark' element={<Bookmarkpage />}></Route>
         </Routes>
-      </BrowserRouter>
     </>
   );
 }

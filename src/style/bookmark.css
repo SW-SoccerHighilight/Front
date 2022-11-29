@@ -20,10 +20,11 @@ body {
   .user-icon h1{
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 50px;
     color: white;
 }
 
 .text {
     color: white;
+    text-align: center;
 }

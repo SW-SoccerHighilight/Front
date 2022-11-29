@@ -1,20 +1,41 @@
-import { Navigate } from "react-router-dom";
-import style from "../style/navigationBar.module.css";
+import { useNavigate } from "react-router-dom";
+import { Button, Row, Col, ButtonGroup } from "react-bootstrap";
 
+const NavigationBar = () => {
+    const navigate = useNavigate();
+    const goToUser = () => {
+      navigate(`/bookmark`)
+    }
+    const goToMain = () => {
+      navigate(`/homepage`)
+    }
 
-const NavigationBar = (props) => {
- 
+    const goToLogin = () => {
+      navigate(`/login`)
+    }
   return (
-    <div className={style.section}>
-      <span className={style.logo}>
-        <span className={style.logo_front}>Sports </span>
-        <span className={style.logo_back}>now</span>
-      </span>
-      <span className={style.navbar}>홈</span>
-      <span className={style.navbar}>일정</span>
-      <span className={style.navbar}>검색</span>
-      <span className={style.navbar}>내 정보</span>
-    </div>
+    <div>
+      <Row>
+        <Col className ="logo-main" lg = {4}>
+        <div className="logo">Sports</div>
+        <div className="logo_back"> now</div>
+        </Col>
+        <Col className = "navbar" lg = {8}>
+        <ButtonGroup className="main-button"> 
+        <Button variant="dark" onClick={goToMain}>홈</Button>
+        </ButtonGroup>
+        <ButtonGroup className="main-button"> 
+        <Button variant="dark" onClick={goToMain}>일정</Button>
+        </ButtonGroup>
+        <ButtonGroup className="main-button"> 
+        <Button variant="dark" onClick={goToUser}>내 정보</Button>
+        </ButtonGroup>
+        <ButtonGroup className="main-button"> 
+        <Button variant="dark" onClick={goToLogin}>로그인</Button>
+        </ButtonGroup>
+        </Col>
+        </Row>
+        </div>
   );
 };
 

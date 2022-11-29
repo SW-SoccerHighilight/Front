@@ -9,10 +9,10 @@ function Bookmarkpage() {
     <div className="container">
       <Container>
         <Row>
-          <Col>
+          <Col lg={3}>
             <User />
           </Col>
-          <Col>
+          <Col lg={9}>
             <Play />
             <Play />
             <Play />

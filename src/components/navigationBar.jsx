@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Row, Col, ButtonGroup } from "react-bootstrap";
+import Search from "./Search";
 
 const NavigationBar = () => {
     const navigate = useNavigate();
@@ -34,8 +35,11 @@ const NavigationBar = () => {
         <Button variant="dark" onClick={goToLogin}>로그인</Button>
         </ButtonGroup>
         </Col>
-        </Row>
-        </div>
+      </Row>
+      <div className="search-bar">
+        <Search />
+      </div>
+      </div>
   );
 };
 
